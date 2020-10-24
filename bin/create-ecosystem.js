@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 const { resolve } = require('path')
 const { createReadStream, createWriteStream } = require('fs')
 
