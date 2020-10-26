@@ -1,9 +1,10 @@
-const { version } = require('./package.json')
+const { version, scripts = {} } = require('./package.json')
 
 module.exports = {
   apps : [{
     name        : process.env.PM2_APP_NAME || "ultrasons.info",
-    script      : "./__sapper__/build/index.js",
+    script      : scripts.start || 'npm',
+    args        : scripts.start ? '' : 'start', 
     watch       : false,
     version
     /* 
